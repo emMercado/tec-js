@@ -1,0 +1,36 @@
+Una empresa que se dedica a la colección de imágenes de perros necesita crear un WebApp donde a través de un menú pueda ingresar a 2 secciones :
+
+1 - Razas Disponibles
+2 - Raza Aleatoria
+
+Opción 1: Razas Disponibles
+
+a) En dicha sección deberá existir un Selector que me permita seleccionar la raza que quiero ver.
+b) Una vez que seleccione la raza debería mostrar una cantidad no mayor a 3 imágenes propias de la raza.
+c) Al hacer click sobre cualquier imagen deberá mostrar la url en un alert propio de JavaScript.
+
+Opción 2: Raza Aleatoria
+
+a) Al acceder a esta opción deberá mostrar una foto aleatoria y al hacer click sobre la misma indicar
+en un alert propio de JavaScript la url de la imagen.
+
+Bonus) Que me muestra algún texto que indique la raza a la que pertenece la imagen.
+
+Se adjuntan las Reglas de los Servicios API para desarrollar la solución
+
+Documentación
+https://dog.ceo/dog-api/documentation/
+
+Listado de Razas
+curl --location --request GET 'https://dog.ceo/api/breeds/list/all'
+
+Fotos de la Raza
+curl --location --request GET 'https://dog.ceo/api/breed/[raza]/images'
+
+Foto Random
+https://dog.ceo/api/breeds/image/random
+
+Se adjunta el template desarrollado por el área de Imagen y Calidad de la Empresa (Sujeto a los
+cambios necesarios por parte del Desarrollador).
+
+https://drive.google.com/file/d/1ZafDW2ZdWapy67lt4qP3wPUAznt57XfT/view?usp=sharing

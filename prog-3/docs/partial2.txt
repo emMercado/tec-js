@@ -1,0 +1,21 @@
+Desarrollar un Frontend en Javascript (Haciendo uso de JQuery) que debería tener dos secciones diferenciadas en un menú :
+
+1. Noticias Generales
+
+Un listado de noticias con foto, título y descripción.
+Al hacer click sobre la foto de la noticia deberá ingresar al enlace externo.
+2. Búsqueda de noticias
+
+Un campo de texto para ingresar la noticia a buscar.
+Un botón que permita realizar la búsqueda.
+Un Listado de noticias (Como en el punto 1) pero con las noticias filtradas por la búsqueda.
+Al hacer click sobre la foto de la noticia deberá ingresar al enlace externo.
+Endpoints y Datos de la API
+
+apiKey : 2f5eddac4c9a47b095c568283e3d6303
+
+Documentación de la API : https://newsapi.org/docs
+
+Endpoint a Utilizar : GET - https://newsapi.org/v2/everything?q={textoBusqueda}&apiKey={apiKey}
+
+Para traer todos los registros generales, el texto de búsqueda tiene que ser : keyword (Ver Documentación)

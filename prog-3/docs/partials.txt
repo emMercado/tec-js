@@ -1,0 +1,38 @@
+Una empresa necesita una Aplicación Web referente a la Saga "El Señor de los Anillos" que les permita mediante una menú poder seleccionar dos opciones :
+
+Personajes
+Libros
+Cada opción deberá tener sus funcionalidades individuales.
+
+Dentro de la sección Personajes deberán estar comprendidos los siguientes criterios de aceptación:
+
+En el Select se deberán mostrar el listado de todos los personajes de la Saga del "Señor de los Anillos" (Se deberá mostrar de la siguiente manera ♀ Human | Belemir => Sexo Raza | Nombre ).
+Una vez que se seleccione un personaje, en un iframe ubicado a la derecha del select se deberá mostrar la página de Wikia de dicho personaje.
+Dentro de la sección Libros deberán estar comprendidos los siguientes criterios de aceptación:
+
+En el Select se deberán mostrar el listado de todos los libros de la Saga del "Señor de los Anillos" (Se deberá mostrar de la siguiente manera The Fellowship Of The Ring => Nombre ).
+Una vez que se seleccione un libro, se deberá mostrar la lista de capítulos en un listado ubicado a mano derecha del select.  (Se deberá mostrar de la siguiente manera : 1.
+The Breaking of the Fellowship | Orden. Nombre)
+Se adjunta el Look&Feel (Templates) de las vistas y los servicios a consumir para desarrollar la solución.
+
+Documentación de la API
+
+https://the-one-api.dev/documentation
+
+Nota: Si el token no les funciona pueden crearse una cuenta en el sitio de la API y usar ese token.
+
+Request de Personajes
+
+curl --location --request GET 'https://the-one-api.dev/v2/character' \
+--header 'Authorization: Bearer MM_yrTDHTF-VlGxnHied'
+
+curl --location --request GET 'https://the-one-api.dev/v2/character/5cd99d4bde30eff6ebccfbbe' \
+--header 'Authorization: Bearer MM_yrTDHTF-VlGxnHied'
+
+Requests de Libros
+
+curl --location --request GET 'https://the-one-api.dev/v2/book/' \
+--header 'Authorization: Bearer MM_yrTDHTF-VlGxnHied'
+
+curl --location --request GET 'https://the-one-api.dev/v2/book/5cf5805fb53e011a64671582/chapter' \
+--header 'Authorization: Bearer MM_yrTDHTF-VlGxnHied'
