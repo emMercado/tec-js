@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Calculadora maestra </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<script>
+  const clickButton = () => {
+    document.getElementById("ejemplo1").value = "number-1"
+    document.getElementById("result").value = "1241"
+  }
+</script>
+
+<body>
+  <main class="register">
+    <section class="last-visit">
+      <h3>Calculadora maestra</h3>
+      <div class="form">
+        <form action="#" method="">
+          <br />
+          <label>Operador 1:</label>
+          <input id="number-1" type="number" name="number-1" placeholder="Ingrese algun numero" maxlength="10"/>
+          <br />
+          <label>Operador 2:</label>
+          <input id="number-2" type="number" name="number-2" placeholder="Ingrese algun numero" maxlength="10" />
+          <br />
+          <br />
+          <div>
+            <label for="valores">Operaciones: </label>
+            <select class="select">
+              <option value="1">Suma</option>
+              <option value="2">Resta</option>
+              <option value="3">Producto</option>
+              <option value="4">Division</option>
+            </select>
+          </div>
+          <br />
+          <div class="button-register">
+            <button type="reset" value="Clear">Limpiar</button>
+            <button name="button" onclick="clickButton()">Ejecutar</button>
+          </div>
+          <br />
+          <label>RESULTADO</label>
+          <input id="result" type="text" name="number-2"/>
+          
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>

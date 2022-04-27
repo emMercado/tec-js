@@ -221,6 +221,12 @@ label{
     margin: 2px;
 }
 
+select{
+    width: 70%;
+    border-radius: 5px;
+    
+}
+
 
 
 @media (min-width: 361px){
