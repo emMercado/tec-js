@@ -1,3 +1,5 @@
+//Mercado Babi Emmanuel E.
+
 const array = [1,2,3]
 
 const suma = (valores, multi) => {
@@ -54,10 +56,3 @@ const decompose =(value)=>{
 }
 
 console.log("Por 5",decompose(valor))
-
-
-
-
-
-
-
