@@ -11,21 +11,52 @@
 </head>
 
 <script>
+
+  const handleSelectOperation = () => {
+    /* Para obtener el valor */
+    var operation = document.getElementById("select-operation").value;
+
+    /* Para obtener el texto */
+    /* var combo = document.getElementById("select-operation");
+    var selected = combo.options[combo.selectedIndex].text;
+    alert(selected); */
+    return  operation
+  }
+
+
   const clickButton = () => {
-    document.getElementById("ejemplo1").value = "number-1"
-    document.getElementById("result").value = "1241"
+
+    var num1 = document.getElementById("number-1").value
+    var num2 = document.getElementById("number-2").value
+  
+    var operation = handleSelectOperation()
+
+    switch (operation) {
+      case 'suma':
+        document.getElementById("result").value = parseInt(num1) + parseInt(num2)
+        break
+      case 'resta':
+        document.getElementById("result").value = num1 - num2
+        break
+      case 'producto':
+        document.getElementById("result").value = num1 * num2
+        break
+      case 'division':
+        document.getElementById("result").value = num1 / num2
+        break
+    }
   }
 </script>
+
 
 <body>
   <main class="register">
     <section class="last-visit">
       <h3>Calculadora maestra</h3>
       <div class="form">
-        <form action="#" method="">
           <br />
           <label>Operador 1:</label>
-          <input id="number-1" type="number" name="number-1" placeholder="Ingrese algun numero" maxlength="10"/>
+          <input id="number-1" type="number" name="number-1" placeholder="Ingrese algun numero" maxlength="10" />
           <br />
           <label>Operador 2:</label>
           <input id="number-2" type="number" name="number-2" placeholder="Ingrese algun numero" maxlength="10" />
@@ -33,11 +64,11 @@
           <br />
           <div>
             <label for="valores">Operaciones: </label>
-            <select class="select">
-              <option value="1">Suma</option>
-              <option value="2">Resta</option>
-              <option value="3">Producto</option>
-              <option value="4">Division</option>
+            <select id="select-operation" onchange="handleSelectOperation()" class="select">
+              <option id="suma" value="suma">Suma</option>
+              <option id="resta" value="resta">Resta</option>
+              <option id="producto" value="producto">Producto</option>
+              <option id="division" value="division">Division</option>
             </select>
           </div>
           <br />
@@ -47,9 +78,7 @@
           </div>
           <br />
           <label>RESULTADO</label>
-          <input id="result" type="text" name="number-2"/>
-          
-        </form>
+          <input id="result" type="text" name="asd" />
       </div>
     </section>
   </main>
@@ -57,5 +86,7 @@
 
   </footer>
 </body>
+
+
 
 </html>
