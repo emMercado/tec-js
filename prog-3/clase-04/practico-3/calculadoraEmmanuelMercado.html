@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title> Calculadora maestra </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<script>
+
+  const handleSelectOperation = () => {
+    /* Para obtener el valor */
+    var operation = document.getElementById("select-operation").value;
+
+    /* Para obtener el texto */
+    /* var combo = document.getElementById("select-operation");
+    var selected = combo.options[combo.selectedIndex].text;
+    alert(selected); */
+    return operation
+  }
+
+
+  const clickButton = () => {
+
+    var num1 = document.getElementById("number-1").value
+    var num2 = document.getElementById("number-2").value
+
+    var operation = handleSelectOperation()
+
+    switch (operation) {
+      case 'suma':
+        alert(document.getElementById("result").value = parseInt(num1) + parseInt(num2))
+        break
+      case 'resta':
+        alert(document.getElementById("result").value = num1 - num2)
+        break
+      case 'producto':
+        alert(document.getElementById("result").value = num1 * num2)
+        break
+      case 'division':
+        alert(document.getElementById("result").value = num1 / num2)
+        break
+    }
+  }
+</script>
+
+
+<body>
+  <main class="register">
+    <section class="last-visit">
+      <h3>Calculadora maestra</h3>
+      <div class="form">
+        <br />
+        <label>Operador 1:</label>
+        <input id="number-1" type="number" name="number-1" placeholder="Ingrese algun numero" maxlength="10" />
+        <br />
+        <label>Operador 2:</label>
+        <input id="number-2" type="number" name="number-2" placeholder="Ingrese algun numero" maxlength="10" />
+        <br />
+        <br />
+        <div>
+          <label for="valores">Operaciones: </label>
+          <select id="select-operation" onchange="handleSelectOperation()" class="select">
+            <option id="suma" value="suma">Suma</option>
+            <option id="resta" value="resta">Resta</option>
+            <option id="producto" value="producto">Producto</option>
+            <option id="division" value="division">Division</option>
+          </select>
+        </div>
+        <br />
+        <div class="button-register">
+          <button type="reset" value="Clear">Limpiar</button>
+          <button name="button" onclick="clickButton()">Ejecutar</button>
+        </div>
+        <br />
+        <label>RESULTADO</label>
+        <input id="result" type="text" name="asd" />
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+
+
+</html>
