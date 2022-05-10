@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+
+<body>
+    <p id="titulo">Calc area de un triangulo</p>
+    <p id="resultado">RESULTADO</p>
+    <p id="base">Base</p>
+    <input type="number" max="5" id="entrada-1" placeholder="Ingrese Base">
+    <p id="altura">Altura</p>
+    <input type="number" max="5" id="entrada-2" placeholder="Ingrese Altura">
+    <br />
+    <br />
+    <button id="boton">Calcular</button>
+</body>
+
+<script>
+    const resultado = document.querySelector("#resultado")
+    const base = document.querySelector("#base")
+    const altura = document.querySelector("#altura")
+    const entrada1 = document.querySelector("#entrada-1")
+    const entrada2 = document.querySelector("#entrada-2")
+    const boton = document.querySelector("#boton")
+
+    const text = {
+        resultado: "El resultado es: ",
+    }
+
+    boton.onclick = () => (
+        resultado.textContent = text.resultado+(entrada1.value * entrada2.value) 
+    )
+
+</script>
+
+</html>

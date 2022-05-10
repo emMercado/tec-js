@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+
+<body>
+    <p id="texto">COLOR DEL TEXTO</p>
+    <select name="select" id="select" onchange="handleChange()">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="black">black</option>
+
+    </select>
+    <select name="selectBackground" id="selectBackground" onchange="handleChangeBackground()">
+        <option value="yellow">yellow</option>
+        <option value="brown">brown</option>
+        <option value="pink">pink</option>
+    </select>
+</body>
+
+<script>
+    /* const red = document.querySelector("red")
+    const blue = document.querySelector("blue")
+    const black = document.querySelector("black")
+    const yellow = document.querySelector("yellow")
+    const brown = document.querySelector("brown")
+    const pink = document.querySelector("pink") */
+
+    const texto  = document.querySelector("texto")
+
+    const select = document.querySelector("select")
+    const selectBackground = document.querySelector("selectBackground")
+    
+    const handleChange =()=> {
+        texto.backgroundColor = select.value
+    }
+    const handleChangeBackground=()=> {
+        texto.style.backgroundColor = selectBackground.value
+    }
+
+
+</script>
+
+</html>

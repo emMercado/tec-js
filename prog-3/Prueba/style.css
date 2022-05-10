@@ -1,0 +1,23 @@
+body{
+    background: #ffff;
+  }
+  
+  #tablero{
+    border-style: dotted;
+    border-radius: 3px;
+    border-collapse: collapse;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+  
+  #tablero td{
+    width: 50px;
+    height: 50px;
+  }
+  
+  #tablero tr:nth-child(odd) td:nth-child(even),
+  #tablero tr:nth-child(even) td:nth-child(odd){
+    background: black;
+  }
+  

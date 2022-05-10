@@ -1,0 +1,75 @@
+
+la produccion como sistema
+
+configuracion del sistema de produccion
+
+
+el sistema de produccion
+entradas --> proceso --> salidas
+
+	control o 
+	retroalimentacion
+
+
+sistema de produccion con subsistemas paralelos
+
+la transformacion puede ser fisica  , geografica, temporal, de la propiedad
+
+el contexto
+
+el contexto de sistema esta constituido por todos aquellos factores, siento ajenos a el q afectan su desenvolvimiento
+con variables q no son controlables
+ indole externo o interno	
+
+*Funciones/departamentos mas comune sen las empresas
+
+Factores externos preponderantes
+economico politico legal sociocultural educacional institucional tecnologico geografico ecologico internacional
+
+el contexto en terminos estrategicos
+	macro 	alcance  tendencias
+	industria estructura productos precios
+	competencia historia fortalezas debilidad metas competidores
+	compania capacidad calidad recurs scultura valores grupos de interes posicion
+	
+produccion de bienes y servicios
+	sociedades	pre empresariales
+			empresariales
+			post empresariales
+
+empresas q producen primordialmente bienes
+empresas q producen primordialmente servicios
+
+medidas de desmpenio
+ejemplos
+	costo	costo unitario costo variable
+		calidad	 especificaciones tolerancias confiabilidad consistencia de calidad costo y reparaciones de undiades vendidas
+
+medidas de desempenio relativas al sist de produccion
+	flexibilidad
+	confiabilidad
+	perdurabilidad
+	seguiridad
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+SISTEMAS
+ENFOQUE DE SISTEMAS
+elementos del sistema
+	corrientes de entrada
+	proceso de conversion
+	corriente de salida
+	la retroalimentacion
+	ambiente
+
+sistemas abiertos / cerrados
+
+
+
+
+
+	
+
+
+
+

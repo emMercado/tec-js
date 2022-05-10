@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+
+<body>
+    <p id="text">asd</p>
+    <button id="button-text" onclick="change()">Change msg</button>
+    <button id="button-text-2">Change msg2</button>
+    <button id="button-text-3">Change ms3</button>
+</body>
+
+
+<script>
+    //const ptext = document.getElementById("text")
+
+    //const ptext = document.querySelector("#text")
+
+    //text.textContent = "HOLA"
+
+    //permite editar el contenido de text
+    //ptext.textContent = "Hola world"
+
+    //modificar contenido html
+    //ptext.innerHTML = "aslda"
+
+    const change = () => {
+        const ptext = document.querySelector("#text")
+        return ptext.textContent = "Hola worldasd"
+    }
+
+    const button2 = document.querySelector("#button-text-2");
+    button2.onclick = () => { text.textContent = "messaje2" }
+
+    const button3 = document.querySelector("#button-text-3");
+    const onClickButon3 =()=> (console.log("asdasbfs"))
+    button3.addEventListener("click",
+        () => {
+            text.textContent = "texermensasje"
+            onClickButon3()
+        }
+    )
+    button3.removeEventListener("click", onClickButon3)
+    //button3.removeEventListener("click" , onClickButon3)
+
+
+</script>
+
+</html>
