@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="">Crea una tarea wachin:  </label>
+    <input type="text" id="taskInput">
+    <button onclick="addTask()">New Task</button>
+    
+
+    <ul id="list"></ul>
+    
+    <script>
+        const vect = [
+            {description: 'task-1', list: true},
+            {description: 'task-2', list: false},
+            {description: 'task-3', list: true},
+        ]
+
+        const taskInput = document.querySelector("#taskInput")
+        const list = document.querySelector("#list")
+        
+        const checkbox = document.createElement("input")
+        checkbox.setAttribute("type", "checkbox")
+        
+        const addTask = ()=> {
+            const task = new Object()
+            task.description = taskInput.value
+            task.list = checkbox.value
+            vect.push(task)
+            vect.map(e=> console.log(e))
+            render()
+        }
+        
+        const render = ()=> {
+            
+            vect.map( e => {
+            const item = document.createElement("li");
+            
+            if(e.list === true || e.list === 'on'){
+                item.textContent = e.description
+                checkbox.textContent = e.list
+            }else{
+                item.style.textDecoration ="line-through";
+                item.textContent = e.description
+            }
+            list.appendChild(item,checkbox);
+        })
+        }
+
+       
+    </script>
+</body>
+</html>

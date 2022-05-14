@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+
+<body>
+    <input type="number" placeholder="Ingresar C°" id="gradosC" onchange="changeC()">
+    <input type="number" placeholder="Ingresar F°" id="gradosF" onchange="changeF()">
+    <input type="number" placeholder="Ingresar k" id="gradosK" onchange="changeK()">
+</body>
+
+<script>
+    const gradosC = document.getElementById("gradosC")
+    const gradosF = document.getElementById("gradosF")
+    const gradosK = document.getElementById("gradosK")
+
+    const changeC = () => {
+        gradosK.value = parseInt(gradosC.value) + 273.5
+        gradosF.value = (parseInt(gradosC.value) * 1.8) + 32
+    }
+    const changeF = () => {
+        gradosC.value = (parseInt(gradosF.value) - 32) * 0.5556
+        gradosK.value = ((parseInt(gradosF.value) - 32) * (5 / 9)) + 273.15
+    }
+    const changeK = () => {
+        gradosC.value = parseInt(gradosK.value) - 273.5
+        gradosF.value = (parseInt(gradosK.value) * 1.8) + 32
+    }
+</script>
+
+</html>
