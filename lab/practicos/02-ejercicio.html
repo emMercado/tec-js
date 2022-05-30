@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="perimetro">PERIMETRO</p>
+    <button onclick="handleChangePerimetro()">Calcular perimetro</button>
+    <hr>
+    <input type="number" id="inputAltura" placeholder="Altura">
+    <input type="number" id="inputBase" placeholder="Base">
+    <hr>
+    <p id="superficie">SUPERFICIE</p>
+    <button onclick="handleChangeSuperficie()">Calcular superficie</button>
+    <hr>
+</body>
+
+<script>
+    const superficie = document.querySelector("#superficie")
+    const perimetro = document.querySelector("#perimetro")
+    const inputAltura = document.querySelector("#inputAltura")
+    const inputBase = document.querySelector("#inputBase")
+
+    const handleChangeSuperficie = () => {
+        superficie.textContent = inputAltura.value * inputBase.value; 
+    }
+    
+    const handleChangePerimetro = () => {
+        perimetro.textContent = (inputAltura.value * 2 ) + (inputBase.value * 2);
+    }
+</script>
+
+</html>

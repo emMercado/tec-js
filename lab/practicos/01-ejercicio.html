@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputText">
+    <hr>
+    <p id="text"></p>
+    <hr>
+    <button onclick="handleChangeText()">Send Text</button>
+</body>
+
+<script>
+    const text = document.querySelector("#text")
+    const inputText = document.querySelector("#inputText")
+
+    const handleChangeText = () => {
+        text.textContent = inputText.value
+        inputText.value = ""
+    }
+</script>
+
+</html>
