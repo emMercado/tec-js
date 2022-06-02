@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TP 5 Emmanuel Mercado</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border-style: double;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        td {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000
+        }
+    </style>
+</head>
+
+<body>
+    <table id="tablero">
+    </table>
+</body>
+
+<script>
+
+    for (let i = 0; i < 8; i++) {
+        $("#tablero").append(`<tr id="columns${[i]}"></tr>`)
+        for (let j = 0; j < 8; j++) {
+            $(`#columns${i}`).append('<td id="rows"></td>')
+        }
+    }
+
+    $("tr:even>td:odd").css("background-color", "red");
+    $("tr:odd>td:even").css("background-color", "red");
+
+    let celdasFilasImpares = $("tr:odd").children();
+    let celdasFilasPares = $("tr:even").children();
+
+    for (let i = 0; i < celdasFilasImpares.length - 1; i = i + 2) {
+        celdasFilasImpares[i].style.backgroundColor = "#000";
+    }
+
+    for (i = 1; i < celdasFilasPares.length; i = i + 2) {
+        celdasFilasPares[i].style.backgroundColor = "#000";
+    }
+
+</script>
+
+</html>

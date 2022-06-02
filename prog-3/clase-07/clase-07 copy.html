@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="get" onclick="postData()">BUTTON OK</button>
+</body>
+
+<script>
+
+    async function postData() {
+
+        const datas = {
+            name: "asdasdasd",
+            surname: "Doe",
+            email: "terminator@name.com",
+            password: "123123"
+        }
+        /*  const settings = {
+             method: 'POST',
+             mode: 'no-cors',
+             headers: {
+                 Accept: 'application/json',
+                 'Content-Type': 'application/json',
+             },
+             body: JSON.stringify(datas)
+ 
+         }; */
+        try {
+            const fetchResponse = await fetch(`http://190.114.205.24:8080/api/users/`, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': "*",
+                
+                },
+                redirect: 'follow',
+                referrer: 'no-referrer',
+                body: JSON.stringify(datas)
+            });
+        const data = await fetchResponse.json();
+        return data
+    } catch (e) {
+        return e;
+    }
+    }
+</script>
+
+</html>
